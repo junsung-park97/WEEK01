@@ -5,16 +5,26 @@
 
 # 각 케이스마다 한 줄씩 평균을 넘는 학생들의 비율을 반올림하여 소수점 셋째 자리까지 출력한다. 정답과 출력값의 절대/상대 오차는 10-3이하이면 정답이다
 
+# C = int(input())
+
+# for _ in range(C):
+#     N = int(input())
+#     for i in range(N):
+#         # i = list(map(int,input().split()))
+#         student = list(map(int,input().split()))
+#         #total_score = sum(i)
+#         total_score = sum(student)
+#         #total = sum / len(i)
+#         total = total_score / len(student)
+#         print(f"{total:.3f}")
+
 C = int(input())
 
 for _ in range(C):
-    N = int(input())
-    for i in range(N):
-        # i = list(map(int,input().split()))
-        student = list(map(int,input().split()))
-        #total_score = sum(i)
-        total_score = sum(student)
-        #total = sum / len(i)
-        total = total_score / len(student)
-        print(f"{total:.3f}")
-
+    data = list(map(int,input().split()))
+    N = data[0]
+    scores = data[1:]
+    average = sum(scores) / N
+    above_average = [score for score in scores if score > average]
+    rate = len(above_average) / N * 100
+    print(f"{rate:.3f}%")
