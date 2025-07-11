@@ -15,4 +15,8 @@ T = int(input())
 
 for _ in range(T):
     S, R = map(input().split())
-    for i in 
+    R = int(R)
+    P = ''
+    for chr in S:
+        
+
