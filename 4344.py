@@ -25,6 +25,10 @@ for _ in range(C):
     N = data[0]
     scores = data[1:]
     average = sum(scores) / N
+    # 평균을 넘는 학생들을 추출 리스트 컴프리헨션이라는 문법
+    # scores리스트에서 하나씩 점수를 꺼내 score변수에 담음
+    # 그 점수가 average보다 크면 리스트에 포함 그렇지 않으면 제외
     above_average = [score for score in scores if score > average]
+    #평균을 넘은 학생들의 비율
     rate = len(above_average) / N * 100
     print(f"{rate:.3f}%")
