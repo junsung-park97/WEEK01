@@ -32,3 +32,8 @@ for _ in range(C):
     #평
     rate = len(above_average) / N * 100
     print(f"{rate:.3f}%")
+
+
+
+
+#
