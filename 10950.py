@@ -4,10 +4,12 @@
 #각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
 
 #각 테스트 케이스마다 A+B를 출력한다.
-
+import sys
+input = sys.stdin.readline
 T = int(input())
 
 for i in range(1, T):
+    num = int(input)
     for a, b in range(1, 10):
         print(a+b)
 

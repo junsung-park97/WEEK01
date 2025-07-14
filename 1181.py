@@ -8,16 +8,31 @@
 # 주어지는 문자열의 길이는 50을 넘지 않는다.
 
 import sys
-input = sys.stdin.readline
 
-N = int(input())
-chars = []
+n = int(sys.stdin.readline())
+lst = []
 
-for _ in range(N) :
-    char = input().strip()
-    chars.append(char)
+#입력받은 케이스만큼 반복하면서 문자를 입력받음
+for i in range(n):
+    lst.append(sys.stdin.readline().strip())
 
-    # chars.sort() 괄호안에 아무것도 넣지않으면 오름차순으로 정렬해준다.
-    if chars.len(char) == 
+#입력받은 문자열의 중복이 있는지 확인? ㄴㄴ 제거
+# 자료형중 하나인 집합을 만드는 함수다 okey
+# 주요기능으로는 중복을 제거하고, 순서를 무시한 고유한 값들의 모음을 만든다 NO!!!!!
+
+set_lst = set(lst)
+
+#set()힘수를 거치고 나온 중복이 없는 문자열을 리스트화?해서 리스트에 다시 집어넣는다?
+lst = list(set_lst)
+
+#그리고 그 문자열을 오름차순으로 다시 정렬한다
+lst.sort()
+
+# 왜 굳이 ? 위에서 길이와 오름차순을 정렬하면 되는거 아닌가? 왜 한번 더 정렬하지?
+#정렬된 문자열의 길이를 기준으로 재정렬한다?
+lst.sort(key = len)
+
+for i in lst:
+    print(i) 
 
 

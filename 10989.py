@@ -22,7 +22,7 @@
 
 #카운트 정렬
 import sys
-# input은 왜 정의해야함?
+
 input = sys.stdin.readline
 
 N = int(input())
