@@ -11,12 +11,22 @@
 # 문자열 S내의 문자를 R번 반복한
 # P문자열을 만든다
 
+import sys
+
+input = sys.stdin.readline
+
 T = int(input())
 
-for _ in range(T):
-    S, R = map(input().split())
-    R = int(R)
-    P = ''
-    for chr in S:
+for _ in range(T) :
+    R, S = map(str,input().strip().split())
+    result = ""
+    for ch in S:
+        # R은 위에서 str으로 받아왔기때문에 형변환을 해야함.
+        result += ch * int(R)
+    print(result)
+
+        
+
+
         
 

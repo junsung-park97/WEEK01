@@ -5,13 +5,17 @@
 
 #각 테스트 케이스마다 A+B를 출력한다.
 import sys
+
 input = sys.stdin.readline
+
 T = int(input())
 
-for i in range(1, T):
-    num = int(input)
-    for a, b in range(1, 10):
-        print(a+b)
+for _ in range(T):
+    a,b = map(int,input().split())
+    sum = a + b
+    print(sum)
+    
+    
 
 
 # 테스트 케이스의 개수 T 라는 말이 인풋의 개수말하는건가? => 맞음

@@ -59,7 +59,8 @@ for com in combinations(dwarfs, 7) :
         # for i in range(int(real_com))
         # real_com은 리스트인데 정수로 변환 할 수 없고, range안에는 정수만 들어가야함
         for i in real_com:
-            print(i)     
+            print(i)  
+        # break에 대해 복습   
         break   
         
     
