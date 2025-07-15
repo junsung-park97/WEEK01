@@ -9,6 +9,7 @@ N, r, c = map(int, input().split())
 
 
 def recur(N, r, c) :
+
     half = 2 ** (N-1)
 
     if  N == 0 :
