@@ -31,14 +31,16 @@ import sys
 
 input = sys.stdin.readline
 
-T = int(input().strip())
-nums = [int(input().strip()) for _ in range(T)]
+T = int(input())
+nums = list(map(int, input().split()))
 
 max_val = 0
 for case in permutations(nums):
     total = 0
+    # 이게 이해가 안가네...
     for i in range(T - 1):
         total += abs(case[i] - case[i + 1])
+    # 처음 반복에서는 max_val이 0이니까 무조건 total이 높지만 두번째반복부터는 둘중 무엇이 높을지 모르니까 둘중 더 높은걸 골라줘야함, 그리고 그냥 숫자에다가 max()를 쓰면 에러
     max_val = max(max_val, total)
 
 print(max_val)
